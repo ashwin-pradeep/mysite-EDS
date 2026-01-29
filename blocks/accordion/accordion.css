@@ -1,0 +1,49 @@
+.accordion.block {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: #fff;
+  font-family: inherit;
+}
+
+.accordion-title-row {
+  border-bottom: 1px solid #eee;
+  padding: 0.75rem 1rem;
+  font-weight: 600;
+}
+
+/* Item label rows */
+.accordion-item-label {
+  cursor: pointer;
+  padding: 0.75rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid #eee;
+}
+
+.accordion-item-label:hover {
+  background-color: #f8f8f8;
+}
+
+.accordion-item-label p {
+  margin: 0;
+}
+
+/* Item description rows */
+.accordion-item-description {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out, padding 0.2s ease-out;
+  padding: 0 1rem;
+  border-top: none;
+}
+
+.accordion-item-description.is-open {
+  padding: 0.5rem 1rem 0.75rem;
+  border-top: 1px solid #eee;
+  max-height: 200px; /* enough for a couple of lines */
+}
+
+.accordion-item-description p {
+  margin: 0;
+}

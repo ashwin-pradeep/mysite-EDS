@@ -18,6 +18,8 @@
   --text-color: #131313;
   --link-color: #3b63fb;
   --link-hover-color: #1d3ecf;
+  --magenta-color: magenta;
+  --cyan-color : cyan;
 
   /* fonts */
   --body-font-family: roboto, roboto-fallback, sans-serif;
@@ -82,6 +84,8 @@ body {
 
 body.appear {
   display: block;
+  background-color: var(--cyan-color);
+  color: var(--magenta-color);
 }
 
 header {

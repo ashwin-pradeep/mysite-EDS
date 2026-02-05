@@ -1,16 +1,30 @@
 version: 1
 
 indices:
-	default:
-		include:
-			- '**/*.docx'
-			- '**/*.doc'
-			- '**/*.md'
-			- '**/*.html'
-		target: /query-index.json
-		properties:
-			- path
-			- title
-			- description
-			- lastModified
-			- content
+  site:
+    # Your capstone folder is the site root, so
+    # website paths are /home, /about-us, /magazine, /faq, etc.
+    # Index everything under this site; you can filter by path
+    # (e.g. /magazine/...) when you use the JSON.
+    include:
+      - /**
+
+    # JSON endpoint for this index
+    target: /query-index.json
+
+    # Columns / fields to extract from each page
+    properties:
+      path:
+        value: path
+
+      title:
+        select: head > meta[property="og:title"]
+        value: attribute(el, "content")
+
+      description:
+        select: head > meta[name="description"]
+        value: attribute(el, "content")
+
+      image:
+        select: head > meta[property="og:image"]
+        value: attribute(el, "content")

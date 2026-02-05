@@ -1,0 +1,93 @@
+
+/*
+	Mobile-first styles: optimized for small screens by default,
+	then enhanced at larger breakpoints below.
+*/
+
+.error-container {
+	padding: 32px 16px;
+}
+
+.error-wrapper {
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+.error {
+	width: 100%;
+}
+
+.error > div {
+	display: flex;
+	flex-direction: column; /* stack text above image on small screens */
+	align-items: center;
+	text-align: center;
+	gap: 20px;
+}
+
+.error-text {
+	max-width: 28rem;
+}
+
+.error-text h1 {
+	margin: 0 0 8px;
+	font-size: 2rem; /* smaller base size for phones */
+	line-height: 1.2;
+}
+
+.error-text p {
+	margin: 0;
+	font-size: 1rem;
+}
+
+.error-media picture {
+	display: block;
+}
+
+.error-media img {
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
+/* Hide meta text (Title / Page 404 / Description / etc.) below the block */
+.error-container .default-content-wrapper {
+	display: none;
+}
+
+@media (width >= 768px) {
+	.error-container {
+		padding: 40px 24px;
+	}
+
+	.error > div {
+		flex-direction: row; /* side-by-side on tablets and up */
+		align-items: center;
+		justify-content: space-between;
+		text-align: left;
+	}
+
+	.error-text {
+		flex: 0 1 40%;
+		align-items: flex-start;
+	}
+
+	.error-text h1 {
+		font-size: 2.5rem;
+	}
+
+	.error-media {
+		flex: 0 1 55%;
+	}
+}
+
+@media (width >= 1200px) {
+	.error-container {
+		padding: 60px 32px;
+	}
+
+	.error-text h1 {
+		font-size: 3rem;
+	}
+}
+

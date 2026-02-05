@@ -1,0 +1,16 @@
+version: 1
+
+indices:
+	default:
+		include:
+			- '**/*.docx'
+			- '**/*.doc'
+			- '**/*.md'
+			- '**/*.html'
+		target: /query-index.json
+		properties:
+			- path
+			- title
+			- description
+			- lastModified
+			- content

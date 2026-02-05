@@ -1,0 +1,79 @@
+.faq-section-container {
+  /* reuse default section padding from styles.css via wrapper */
+}
+
+.faq-section {
+  width: 100%;
+}
+
+.faq-section > div {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.faq-section-left h1 {
+  margin-bottom: 0.5em;
+}
+
+.faq-section-left h1::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 3px;
+  margin-top: 8px;
+  background-color: #ffd400;
+}
+
+.faq-section-left picture {
+  display: block;
+}
+
+.faq-section-left picture img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* hide duplicate imported inline image if present */
+.faq-section-left > p > img {
+  display: none;
+}
+
+.faq-section-left p {
+  max-width: 60rem;
+}
+
+.faq-section-right {
+  background-color: var(--light-color);
+  padding: 24px 24px 32px;
+}
+
+.faq-section-right h3 {
+  margin-top: 0;
+}
+
+.faq-section-right p {
+  margin-top: 0.5em;
+  margin-bottom: 0;
+}
+
+.faq-section-right a:any-link {
+  color: var(--link-color);
+}
+
+/* layout for larger screens */
+@media (width >= 900px) {
+  .faq-section > div {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .faq-section-left {
+    flex: 0 0 65%;
+  }
+
+  .faq-section-right {
+    flex: 0 0 30%;
+  }
+}

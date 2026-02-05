@@ -1,0 +1,141 @@
+.card-contributors-container {
+  text-align: left;
+}
+
+.card-contributors-container .default-content-wrapper {
+  margin-bottom: 40px;
+}
+
+.card-contributors-container .default-content-wrapper h1 {
+  margin-bottom: 0.25em;
+}
+
+.card-contributors-container .default-content-wrapper h2 {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  position: relative;
+}
+
+.card-contributors-container .default-content-wrapper h2::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 3px;
+  margin-top: 8px;
+  background-color: #ffd400; /* yellow underline similar to screenshot */
+}
+
+.card-contributors-container .default-content-wrapper p {
+  max-width: 40rem;
+}
+
+/* contributors wrappers override global section div layout */
+.card-contributors-container .card-contributors-wrapper,
+.card-contributors-container .card-contributers-wrapper {
+  max-width: none;
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  vertical-align: top;
+}
+
+/* individual contributor card */
+.card-contributors,
+.card-contributers {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 24px 16px;
+}
+
+.card-contributors > div,
+.card-contributers > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.card-contributors picture,
+.card-contributers picture {
+  display: block;
+}
+
+.card-contributors img,
+.card-contributers img {
+  display: block;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.card-contributors h3,
+.card-contributers h3 {
+  margin: 16px 0 4px;
+}
+
+.card-contributors h5,
+.card-contributers h5 {
+  margin: 0 0 8px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  font-size: 0.9em;
+}
+
+/* buttons bar under each card */
+.card-contributors-buttons {
+  margin-top: 16px;
+  display: flex;
+  justify-content: center;
+  background-color: #111;
+}
+
+.card-contributors-buttons .button-container {
+  flex: 0 1 auto;
+  margin: 0 8px;
+}
+
+.card-contributors-buttons a.button:any-link {
+  border-radius: 0;
+  margin: 0;
+  border: none;
+  background-color: transparent;
+  color: #fff;
+  font-size: 0.85em;
+  padding: 0;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-contributors-buttons a.button:any-link:hover,
+.card-contributors-buttons a.button:any-link:focus {
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+/* mobile-first: cards naturally stack as inline-blocks at 100% width */
+.card-contributors-container .card-contributors-wrapper,
+.card-contributors-container .card-contributers-wrapper {
+  width: 100%;
+}
+
+@media (width >= 700px) {
+  /* on tablets, show two cards per row */
+  .card-contributors-container .card-contributors-wrapper,
+  .card-contributors-container .card-contributers-wrapper {
+    width: 50%;
+  }
+}
+
+@media (width >= 1024px) {
+  /* on desktop, four cards per row */
+  .card-contributors-container .card-contributors-wrapper,
+  .card-contributors-container .card-contributers-wrapper {
+    width: 25%;
+  }
+}
